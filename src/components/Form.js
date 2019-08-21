@@ -15,7 +15,7 @@ const Form = (props) => {
         evt.preventDefault();
         const newMember = {
             ...memberList,
-            //newMember appended to memberList6
+            //newMember appended to memberList
         };
         props.addMember(newMember);
       };

@@ -18,7 +18,7 @@ function App() {
       <div className="member-list">
         {memberList.map(member => {
           return (
-            <div className="member" key={member.name}>
+            <div className="member">
               <p>{member.name}</p>
               <p>{member.email}</p>
               <p>{member.role}</p>
