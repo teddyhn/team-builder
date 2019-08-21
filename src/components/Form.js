@@ -5,6 +5,9 @@ const Form = (props) => {
 
     useEffect(() => {
         setMemberList(props.memberToEdit);
+        console.log(props.memberToEdit);
+        console.log(props.memberList.indexOf(props.memberToEdit));
+        console.log(props.memberIndex);
     }, [props.memberToEdit])
 
     const handleChange = evt => {
@@ -17,7 +20,9 @@ const Form = (props) => {
             ...memberList,
             //newMember appended to memberList
         };
-        props.addMember(newMember);
+        if (!props.memberToEdit) {
+            props.addMember(newMember);
+        } else props.editMember(newMember);
       };
 
     return (
