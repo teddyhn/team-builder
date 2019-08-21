@@ -1,0 +1,93 @@
+html {
+    background-color: #2E3440;
+}
+
+p {
+    margin: 0;
+}
+
+.App {
+    margin: auto;
+    width: 60%;
+}
+
+button {
+    background-color: #88C0D0;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.header {
+    background-color: #3B4252;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.member-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+
+    .member {
+        background-color: #434C5E;
+        border-radius: 10px;
+        color: #ECEFF4;
+        line-height: 2.4;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        padding: 1rem;
+        text-align: center;
+        width: 250px;
+
+        .role {
+            color: #8FBCBB;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #434C5E;
+    border-radius: 10px;
+    color: #ECEFF4;
+    line-height: 2.4;
+    margin: auto;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    padding: 1rem;
+    width: 250px;
+
+    button {
+        margin-top: 0.5em;
+    }
+
+    input {
+        background-color: #2E3440;
+        border: none;
+        color: #FFFFFF;
+        margin-left: 0.5em;
+        padding: 2px 0 2px 1px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
