@@ -1,37 +1,116 @@
+html {
+  background-color: #2E3440;
+}
+
+p {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  margin: auto;
+  width: 60%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: #88C0D0;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #3B4252;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.member-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.member-list .member {
+  background-color: #434C5E;
+  border-radius: 10px;
+  color: #ECEFF4;
+  line-height: 2.4;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
 }
 
-.member {
-  margin-bottom: 2rem;
+.member-list .member .role {
+  color: #8FBCBB;
 }
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #434C5E;
+  border-radius: 10px;
+  color: #ECEFF4;
+  line-height: 2.4;
+  margin: auto;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+  padding: 1rem;
+  width: 250px;
+}
+
+form button {
+  margin-top: 0.5em;
+}
+
+form input {
+  background-color: #2E3440;
+  border: none;
+  color: #FFFFFF;
+  margin-left: 0.5em;
+  padding: 2px 0 2px 1px;
+}
+
+form input:focus {
+  outline: none;
+}
+/*# sourceMappingURL=App.css.map */

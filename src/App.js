@@ -30,13 +30,16 @@ function App() {
 
   return (
     <div className="App">
+      <div className="header">
+        <h1>Team Builder</h1>
+      </div>
       <div className="member-list">
         {memberList.map(member => {
           return (
             <div className="member">
               <p>{member.name}</p>
               <p>{member.email}</p>
-              <p>{member.role}</p>
+              <p className="role">{member.role}</p>
               <button onClick={() => {
                         setMemberToEdit(member);
                         setMemberIndex(memberList.indexOf(member))
@@ -48,13 +51,15 @@ function App() {
           );
         })}
       </div>
-      <Form 
-        addMember={addMember}
-        editMember={editMember}
-        memberToEdit={memberToEdit}
-        memberList={memberList}
-        memberIndex={memberIndex}
-      />
+      <div className="form-container">
+        <Form 
+          addMember={addMember}
+          editMember={editMember}
+          memberToEdit={memberToEdit}
+          memberList={memberList}
+          memberIndex={memberIndex}
+        />
+      </div>
     </div>
   );
 }
