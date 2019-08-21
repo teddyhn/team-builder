@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Form = (props) => {
-    const [memberList, setMemberList] = useState( { name: "", email: "", role: "" });
+    const [memberList, setMemberList] = useState({});
+
+    useEffect(() => {
+        setMemberList(props.memberToEdit);
+    })
 
     const handleChange = evt => {
         setMemberList({ ...memberList, [evt.target.name]: evt.target.value });
@@ -11,7 +15,7 @@ const Form = (props) => {
         evt.preventDefault();
         const newMember = {
             ...memberList,
-            //newMember appended to memberList6
+            //newMember appended to memberList
         };
         props.addMember(newMember);
       };
@@ -23,7 +27,7 @@ const Form = (props) => {
                 <input
                     type="text"
                     name="name"
-                    value={props.memberList.name}
+                    value={memberList.name}
                     onChange={evt => handleChange(evt)}
                 />
             </label>
@@ -32,7 +36,7 @@ const Form = (props) => {
                 <input
                     type="text"
                     name="email"
-                    value={props.memberList.email}
+                    value={memberList.email}
                     onChange={evt => handleChange(evt)}
                 />
             </label>
@@ -41,7 +45,7 @@ const Form = (props) => {
                 <input
                     type="text"
                     name="role"
-                    value={props.memberList.role}
+                    value={memberList.role}
                     onChange={evt => handleChange(evt)}
                 />
             </label>

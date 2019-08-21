@@ -7,6 +7,7 @@ import { data } from './data/data';
 
 function App() {
   const [memberList, setMemberList] = useState(data);
+  const [memberToEdit, setMemberToEdit] = useState({});
 
   const addMember = member => {
     setMemberList([ ...memberList, member ]);
@@ -21,6 +22,7 @@ function App() {
               <p>{member.name}</p>
               <p>{member.email}</p>
               <p>{member.role}</p>
+              <button onClick={() => setMemberToEdit(member)}>Edit</button>
             </div>
           );
         })}
@@ -29,6 +31,7 @@ function App() {
         memberList={memberList}
         setMemberList={setMemberList}
         addMember={addMember}
+        memberToEdit={memberToEdit}
       />
     </div>
   );
