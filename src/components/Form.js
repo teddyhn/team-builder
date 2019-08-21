@@ -5,7 +5,7 @@ const Form = (props) => {
 
     useEffect(() => {
         setMemberList(props.memberToEdit);
-    })
+    }, [props.memberToEdit])
 
     const handleChange = evt => {
         setMemberList({ ...memberList, [evt.target.name]: evt.target.value });
@@ -15,7 +15,7 @@ const Form = (props) => {
         evt.preventDefault();
         const newMember = {
             ...memberList,
-            //newMember appended to memberList
+            //newMember appended to memberList6
         };
         props.addMember(newMember);
       };
