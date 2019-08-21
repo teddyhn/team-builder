@@ -25,6 +25,7 @@ function App() {
     })
 
     setMemberList([ ...memberList ]);
+    setMemberToEdit({});
   };
 
   return (

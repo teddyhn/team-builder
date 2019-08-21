@@ -5,9 +5,6 @@ const Form = (props) => {
 
     useEffect(() => {
         setMemberList(props.memberToEdit);
-        console.log(props.memberToEdit);
-        console.log(props.memberList.indexOf(props.memberToEdit));
-        console.log(props.memberIndex);
     }, [props.memberToEdit])
 
     const handleChange = evt => {
@@ -16,13 +13,19 @@ const Form = (props) => {
 
     const handleSubmit = evt => {
         evt.preventDefault();
+        evt.target.reset();
         const newMember = {
             ...memberList,
             //newMember appended to memberList
         };
-        if (!props.memberToEdit) {
-            props.addMember(newMember);
-        } else props.editMember(newMember);
+
+        if (!newMember.name || !newMember.email || !newMember.role) {
+            alert('Fields cannot be left blank.');
+        } else {
+            if (Object.keys(props.memberToEdit).length === 0) {
+                props.addMember(newMember);
+            } else props.editMember(newMember);
+        }
       };
 
     return (
