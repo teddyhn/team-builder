@@ -12,10 +12,10 @@ function App() {
 
   const addMember = member => {
     setMemberList([ ...memberList, member ]);
+    setMemberToEdit({});
   };
 
   const editMember = edited => {
-
     memberList.map(member => {
       if (memberIndex === memberList.indexOf(member)) {
         member.name = edited.name;
